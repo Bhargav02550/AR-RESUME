@@ -1,0 +1,69 @@
+
+:root {
+    --primary-color: #E5E8E8;
+    --secondary-color: #8D9797;
+    --tertiary-color: #4E545C;
+    --black-color: #000401;
+    }  
+
+.mainpage{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 200px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 50px; */
+    width: 400px;
+    max-width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.form-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-container .input{
+    border: none;
+    outline: none;
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.textareainput{
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    resize: vertical;
+    max-height: 130px;
+    min-height: 75px;
+    max-width: 130px;
+    min-width: 300px;
+}
+
+.form-container button{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+}
