@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 
-
+const port = process.env.PORT || 4000;
 
 app.use(cors())  
 app.use('/', Router);
@@ -22,6 +22,6 @@ mongoose
   )
   .then(() => console.log("connected to database"))
   .then(() => {
-    app.listen(5001);
+    app.listen(port);
   })
   .catch((err) => console.log(err));
