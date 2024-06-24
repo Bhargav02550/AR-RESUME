@@ -3,40 +3,33 @@ const schema = mongoose.Schema;
 
 
 const UserSchema = new schema({
-    rollno: {
-        type: String,
-        required: true,
-        minlength: 10,
-        maxlength: 10,
-        unique: true
-    },
-    name: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength: 50
-    },
-    email: {
-        type: String,
-        required: true,
-        minlength: 1,
-        maxlength:30,
+    personal: {
+        rollno:{
+            type: String,
+            required: true,
+            unique: true,
+        },
+        name:String,
+        email:String,
+        phone:String,
+        github:String,
+        linkedin:String,
     },
     education:{
         type: Object,
-        required: true,
+        required:true,
     },
     projects:{
         type: Object,
         required:true,
     },
-    prolang:{
+    languages:{
         type:Object,
-        required:false,
+        required:true,
     },
-    technologies:{
+    frameworks:{
         type:Object,
-        required:false,
+        required:true,
     },
     createdAt:{
         type:String,
@@ -54,7 +47,7 @@ const UserSchema = new schema({
 });
 
 UserSchema.pre('save', function(next) {
-    this.rollno = this.rollno.toLowerCase();
+    this.personal.rollno = this.personal.rollno.toLowerCase();
     next();
 });
 
